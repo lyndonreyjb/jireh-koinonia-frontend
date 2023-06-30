@@ -31,9 +31,7 @@ const Connect = () => {
                 <div className="flex-grow border-t border-gray-300"></div>
               </div>
             </div>
-            <div className="text-slate-200 md:text-7xl text-6xl font-bold uppercase">
-              {hero.description1}
-            </div>
+
             <div className="mt-4  text-slate-300 md:text-xl text-lg ">
               {hero.description2}
             </div>
