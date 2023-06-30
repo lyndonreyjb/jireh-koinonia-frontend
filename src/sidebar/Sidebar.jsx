@@ -14,10 +14,10 @@ const Sidebar = () => {
     <aside
       className={
         isSidebarOpen
-          ? "fixed top-0 right-0 w-2/3 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-0 transition-transform duration-300 md:hidden block"
-          : "fixed top-0 right-0 w-2/3 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-full transition-transform duration-300 md:hidden block"
+          ? "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-0 transition-transform duration-300 md:hidden block"
+          : "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-full transition-transform duration-300 md:hidden block"
       }>
-      <div className="p-10 md:p-8 relative text-2xl uppercase ">
+      <div className="p-10 md:p-8 relative text-xl uppercase ">
         <button
           onClick={closeSidebar}
           className="text-3xl absolute top-4 right-4 cursor-pointer">
