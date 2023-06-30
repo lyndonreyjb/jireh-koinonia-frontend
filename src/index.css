@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow-x: hidden;
+  background-color: #FAFAFA;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.about-btn:before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  padding: 60px;
+}
+
+.about-btn:hover::before {
+  display: block;
+}
