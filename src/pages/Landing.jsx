@@ -37,9 +37,6 @@ const Landing = () => {
             <div className="mt-4  text-slate-300 md:text-xl text-lg ">
               {hero.description2}
             </div>
-            <div className="mt-4  text-slate-300 md:text-xl text-lg ">
-              {hero.time}
-            </div>
           </div>
         </div>
       ))}
