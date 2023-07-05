@@ -29,7 +29,7 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className="border border-gray-300  rounded-l-md outline-none w-full  p-4"
+                  className="border border-gray-300  rounded-l-lg outline-none w-full  p-4"
                 />
                 <button
                   type="submit"
@@ -58,7 +58,7 @@ const Footer = () => {
 
       <div className="w-5/6 md:container mx-auto py-10 text-center md:text-left">
         {footer.length > 0 && (
-          <div className="flex-cols h-full md:flex">
+          <div className="flex-cols h-full md:flex text-neutral-200">
             <div className="w-full md:w-3/6 mt-3 md:mt-0">
               <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
                 {footer[1].title}
