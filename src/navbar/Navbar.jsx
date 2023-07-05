@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="z-40 fixed top-0 flex items-center justify-center w-full bg-white shadow">
-      <div className="w-11/12  flex justify-between ">
+      <div className="w-11/12  flex justify-between">
         <img src={church} className="h-20 p-2" />
         <div className="flex justify-center items-center ">
           <NavLinks />
