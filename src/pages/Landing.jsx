@@ -1,12 +1,30 @@
 import { useEffect, useState } from "react";
 import { urlFor, client } from "../client";
+import Loading from "../Loading";
 
 const Landing = () => {
   const [header, setHeader] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const query = '*[_type == "post"]';
+      const data = await client.fetch(query);
+      setHeader(data);
+    } catch (e) {
+      console.log(e);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const query = '*[_type == "post"]';
-    client.fetch(query).then((data) => setHeader(data));
+    fetchData();
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <div className="min-h-screen bg-slate-200">
@@ -22,7 +40,7 @@ const Landing = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="flex flex-col -mt-20 text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+          <div className="flex flex-col  text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
             <div className="text-xl uppercase ">
               <div className="flex py-5 items-center">
                 <div className="flex-grow border-t border-gray-300"></div>

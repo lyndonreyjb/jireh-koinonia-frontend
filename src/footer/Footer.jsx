@@ -3,15 +3,31 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiTwotonePhone, AiFillHome } from "react-icons/ai";
 import { IoMail } from "react-icons/io5";
 import { client } from "../client";
+import Loading from "../Loading";
 const Footer = () => {
   const [footer, setFooter] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const query = '*[_type == "footer"]';
+      const data = await client.fetch(query);
+      setFooter(data);
+    } catch (e) {
+      console.log(e);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const query = '*[_type == "footer"]';
-    client
-      .fetch(query)
-      .then((data) => setFooter(data))
-      .catch((error) => console.error("Error:", error));
+    fetchData();
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <footer>
       {/* Newsletter */}
@@ -29,7 +45,7 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Enter your email"
-                  className="border border-gray-300  rounded-l-md outline-none w-full  p-4"
+                  className="border border-gray-300  rounded-l-lg outline-none w-full  p-4"
                 />
                 <button
                   type="submit"
@@ -58,7 +74,7 @@ const Footer = () => {
 
       <div className="w-5/6 md:container mx-auto py-10 text-center md:text-left">
         {footer.length > 0 && (
-          <div className="flex-cols h-full md:flex">
+          <div className="flex-cols h-full md:flex text-neutral-200">
             <div className="w-full md:w-3/6 mt-3 md:mt-0">
               <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
                 {footer[1].title}
