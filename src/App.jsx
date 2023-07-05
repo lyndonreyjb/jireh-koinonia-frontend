@@ -3,7 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import {
   About,
   Contact,
-  Home,
+  Layout,
   Landing,
   OurLocation,
   WhatWeBelieve,
@@ -14,7 +14,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
         index: true,

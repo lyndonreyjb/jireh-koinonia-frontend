@@ -7,7 +7,7 @@ const Connect = () => {
     const query = '*[_type == "post"]';
     client.fetch(query).then((data) => setHeader(data));
   }, []);
-  console.log(header);
+
   return (
     <div className="h-screen bg-slate-200 mt-20">
       {header.map((hero, index) => (
