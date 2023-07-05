@@ -1,20 +1,38 @@
 import { useEffect, useState } from "react";
 import { urlFor, client } from "../client";
+import Loading from "../Loading";
 
 const Connect = () => {
   const [header, setHeader] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const query = '*[_type == "post"]';
+      const data = await client.fetch(query);
+      setHeader(data);
+    } catch (e) {
+      console.log(e);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const query = '*[_type == "post"]';
-    client.fetch(query).then((data) => setHeader(data));
+    fetchData();
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <div className="h-screen bg-slate-200 mt-20">
+    <div className="min-h-screen bg-slate-200">
       {header.map((hero, index) => (
         <div
-          className="h-4/6 relative"
+          className="relative"
           key={hero.title + index}
           style={{
+            height: "70vh",
             backgroundImage: `url(${urlFor(hero.mainImage).toString()})`,
             backgroundSize: "cover",
             backgroundPosition: "center",

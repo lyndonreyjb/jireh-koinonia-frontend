@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 const NavLinks = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
@@ -13,46 +14,78 @@ const NavLinks = () => {
     setIsOpen(false);
   };
 
+  const handleNavLinkClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scroll behavior
+    });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="md:block hidden font-medium uppercase ">
-      <NavLink className="mr-4" to="/">
+    <div
+      className={`md:block hidden font-medium text-slate-100 uppercase ${
+        isScrolled ? "text-slate-800" : ""
+      }`}>
+      <NavLink className="mr-4 nav-link" to="/" onClick={handleNavLinkClick}>
         Home
       </NavLink>
-      <NavLink className="mr-4" to="/connect">
-        Connect
-      </NavLink>
-      <NavLink className="mr-4" to="/contact">
-        Contact
-      </NavLink>
       <div
-        className="relative inline-block about-btn"
+        className="relative inline-block about-btn mr-4"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         <div className="flex items-center w-full">
-          <a className="mr-1">about</a>
+          <a
+            className={`mr-1 nav-link ${isScrolled ? "text-slate-800" : ""}`}
+            onClick={handleNavLinkClick}>
+            about
+          </a>
           <FaChevronDown />
         </div>
 
         {isOpen && (
-          <div className="absolute w-56 top-12  mt-2 bg-white border border-gray-200 rounded-md shadow-md">
+          <div className="absolute w-56 top-12 mt-2 bg-white border border-gray-200 rounded-md shadow-md">
             <NavLink
               to="/about/who-we-are"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
+              onClick={handleNavLinkClick}>
               Who We Are
             </NavLink>
             <NavLink
               to="/about/what-we-believe"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
+              onClick={handleNavLinkClick}>
               What We Believe
             </NavLink>
             <NavLink
               to="/about/our-location"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
+              onClick={handleNavLinkClick}>
               Our Location
             </NavLink>
           </div>
         )}
       </div>
+      <NavLink
+        className="mr-4 nav-link"
+        to="/connect"
+        onClick={handleNavLinkClick}>
+        Connect
+      </NavLink>
+      <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>
+        Contact
+      </NavLink>
     </div>
   );
 };

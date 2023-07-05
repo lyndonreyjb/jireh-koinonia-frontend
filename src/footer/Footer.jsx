@@ -3,15 +3,31 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiTwotonePhone, AiFillHome } from "react-icons/ai";
 import { IoMail } from "react-icons/io5";
 import { client } from "../client";
+import Loading from "../Loading";
 const Footer = () => {
   const [footer, setFooter] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const query = '*[_type == "footer"]';
+      const data = await client.fetch(query);
+      setFooter(data);
+    } catch (e) {
+      console.log(e);
+    }
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const query = '*[_type == "footer"]';
-    client
-      .fetch(query)
-      .then((data) => setFooter(data))
-      .catch((error) => console.error("Error:", error));
+    fetchData();
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <footer>
       {/* Newsletter */}
