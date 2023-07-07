@@ -46,11 +46,12 @@ const NavLinks = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         <div className="flex items-center w-full">
-          <a
+          <NavLink
+            to="/about"
             className={`mr-1 nav-link ${isScrolled ? "text-slate-800" : ""}`}
             onClick={handleNavLinkClick}>
             about
-          </a>
+          </NavLink>
           <FaChevronDown />
         </div>
 

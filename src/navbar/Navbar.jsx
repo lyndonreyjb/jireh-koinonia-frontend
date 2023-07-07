@@ -10,6 +10,8 @@ import Sidebar from "../sidebar/Sidebar";
 const Navbar = () => {
   const { openSidebar } = useGlobalContext();
   const [navbarBg, setNavbarBg] = useState("bg-transparent");
+  const [menu, setMenu] = useState("text-white");
+
   const [logo, setLogo] = useState(churchW);
 
   const handleNavLinkClick = () => {
@@ -23,10 +25,12 @@ const Navbar = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
+        setMenu("text-neutral-900");
         setNavbarBg("bg-slate-50");
         setLogo(churchB);
       } else {
         setNavbarBg("bg-transparent");
+        setMenu("text-white");
         setLogo(churchW);
       }
     };
@@ -46,7 +50,7 @@ const Navbar = () => {
         </NavLink>
         <div className="flex justify-end items-center">
           <button
-            className="text-white h-10 bg-slate-300 hover:bg-slate-200 font-medium rounded-md px-5 py-2.5 md:hidden"
+            className={`text-2xl ${menu} 0 h-10  font-medium rounded-md px-5 py-2.5 md:hidden`}
             onClick={openSidebar}>
             <FaBars />
           </button>

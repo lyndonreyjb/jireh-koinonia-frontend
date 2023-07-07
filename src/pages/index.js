@@ -1,9 +1,9 @@
-export { default as Layout } from "./Layout";
-export { default as Landing } from "./Landing";
-export { default as About } from "./About";
-export { default as Contact } from "./Contact";
-export { default as Connect } from "./Connect";
+export { default as Layout } from "../pages/Layout";
+export { default as Landing } from "../pages/landing/Landing";
+export { default as About } from "../pages/about/About";
+export { default as Contact } from "../pages/contact/Contact";
+export { default as Connect } from "../pages/connect/Connect";
 
-export { default as OurLocation } from "./about-pages/OurLocation";
-export { default as WhatWeBelieve } from "./about-pages/WhatWeBelieve";
-export { default as WhoWeAre } from "./about-pages/WhoWeAre";
+export { default as OurLocation } from "../pages/about/about-pages/OurLocation";
+export { default as WhatWeBelieve } from "../pages/about/about-pages/WhatWeBelieve";
+export { default as WhoWeAre } from "../pages/about/about-pages/WhoWeAre";

@@ -9,7 +9,7 @@ const Layout = () => {
       <main className="flex-grow ">
         <Outlet />
       </main>
-      <footer className="mt-auto text-center text-neutral-600 bg-neutral-600 dark:text-neutral-200 lg:text-left">
+      <footer className="mt-auto text-center text-neutral-600 bg-neutral-900 dark:text-neutral-200 lg:text-left">
         <Footer />
       </footer>
     </div>

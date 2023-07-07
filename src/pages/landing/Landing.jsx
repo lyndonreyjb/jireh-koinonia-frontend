@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import { urlFor, client } from "../client";
-import Loading from "../Loading";
+import { urlFor, client } from "../../client";
+import Loading from "../../Loading";
+import Welcome from "./Welcome";
+import Map from "./Map";
+import Connect from "../connect/Connect";
 
-const Connect = () => {
+const Landing = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,23 +28,24 @@ const Connect = () => {
   if (loading) {
     return <Loading />;
   }
+
   return (
     <div className="min-h-screen bg-slate-200">
       {header.map((hero, index) => (
         <div
-          className="relative"
+          className="h-screen relative"
           key={hero.title + index}
           style={{
-            height: "70vh",
-            backgroundImage: `url(${urlFor(hero.mainImage).toString()})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${urlFor(
+              hero.mainImage
+            ).toString()})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="flex flex-col text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+          <div className="flex flex-col  text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
             <div className="text-xl uppercase ">
-              <div className="flex py-5 items-center">
+              <div className="flex items-center">
                 <div className="flex-grow border-t border-gray-300"></div>
                 <span className="flex-shrink mx-4 text-gray-300">
                   {hero.title}
@@ -49,15 +53,21 @@ const Connect = () => {
                 <div className="flex-grow border-t border-gray-300"></div>
               </div>
             </div>
-
+            <div className="text-slate-200 md:text-7xl text-6xl font-bold uppercase">
+              {hero.description1}
+            </div>
             <div className="mt-4  text-slate-300 md:text-xl text-lg ">
               {hero.description2}
             </div>
           </div>
         </div>
       ))}
+      {/*  */}
+      <Welcome />
+      <Connect />
+      <Map />
     </div>
   );
 };
 
-export default Connect;
+export default Landing;

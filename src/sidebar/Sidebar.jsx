@@ -14,8 +14,8 @@ const Sidebar = () => {
     <aside
       className={
         isSidebarOpen
-          ? "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-0 transition-transform duration-300 md:hidden block"
-          : "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-slate-200 to-slate-300 transform translate-x-full transition-transform duration-300 md:hidden block"
+          ? "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-yellow-500 to-yellow-600 transform translate-x-0 transition-transform duration-300 md:hidden block"
+          : "fixed top-0 right-0 w-5/6 h-full bg-gradient-to-r from-yellow-500 to-yellow-600 transform translate-x-full transition-transform duration-300 md:hidden block"
       }>
       <div className="p-10 md:p-8 relative text-xl uppercase ">
         <button

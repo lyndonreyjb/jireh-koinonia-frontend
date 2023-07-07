@@ -1,8 +1,9 @@
-import RandomVerse from "./RandomVerse";
+import RandomVerse from "../RandomVerse";
 import { useEffect, useState } from "react";
-import { urlFor, client } from "../client";
-import bg from "../assets/bg.jpg";
-import Loading from "../Loading";
+import { urlFor, client } from "../../client";
+import bg from "../../assets/bg.jpg";
+import Loading from "../../Loading";
+import Socials from "./Socials";
 
 const Contact = () => {
   const [header, setHeader] = useState([]);
@@ -58,6 +59,9 @@ const Contact = () => {
           </div>
         </div>
       ))}
+      <div>
+        <Socials />
+      </div>
       <div className="flex justify-center items-center pb-20 relative">
         <div className="flex flex-col md:flex-row w-full md:w-4/5">
           <div
@@ -100,7 +104,7 @@ const Contact = () => {
                     type="text"
                     placeholder="Message"
                     className="mt-4 border h-40 border-gray-300 outline-none p-4 rounded-lg"></textarea>
-                  <button className="mt-4 h-14 w-32 rounded-lg bg-yellow-600 text-white">
+                  <button className="mt-4 h-14 w-32 rounded-lg bg-yellow-600 hover:bg-yellow-500 text-white">
                     Send
                   </button>
                 </div>
