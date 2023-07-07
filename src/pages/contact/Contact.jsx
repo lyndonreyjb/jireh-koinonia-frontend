@@ -4,7 +4,7 @@ import { urlFor, client } from "../../client";
 import bg from "../../assets/bg.jpg";
 import Loading from "../../Loading";
 import Socials from "./Socials";
-
+import MapBox from "../../MapBox";
 const Contact = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ const Contact = () => {
     return <Loading />;
   }
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-neutral-900">
       {header.map((hero, index) => (
         <div
           className="relative"
@@ -62,7 +62,7 @@ const Contact = () => {
       <div>
         <Socials />
       </div>
-      <div className="flex justify-center items-center pb-20 relative">
+      <div className="flex justify-center items-center  relative">
         <div className="flex flex-col md:flex-row w-full md:w-4/5">
           <div
             className=" w-full flex justify-center items-center"
@@ -113,6 +113,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <MapBox />
     </div>
   );
 };

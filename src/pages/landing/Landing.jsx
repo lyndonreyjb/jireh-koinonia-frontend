@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
 import Welcome from "./Welcome";
-import Map from "./Map";
+import MapBox from "../../MapBox";
 import Connect from "../connect/Connect";
 
 const Landing = () => {
@@ -65,7 +65,7 @@ const Landing = () => {
       {/*  */}
       <Welcome />
       <Connect />
-      <Map />
+      <MapBox />
     </div>
   );
 };
