@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 
+
 body {
   overflow-x: hidden;
   background-color: #FAFAFA;
   margin: 0;
+  font-family: 'Cabin', sans-serif;
   font-family: 'Open Sans', sans-serif;
 }
+
 
 
 .about-btn:before {
