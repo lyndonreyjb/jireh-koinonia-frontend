@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
 import {
   About,
   Contact,
@@ -52,9 +51,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <div>
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 
