@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const Ministries = () => {
+const MinistriesLink = () => {
   return (
     <div className="w-screen text-neutral-100">
       <div className="h-20 grid grid-cols-5 bg-neutral-900">
@@ -31,4 +31,4 @@ const Ministries = () => {
   );
 };
 
-export default Ministries;
+export default MinistriesLink;
