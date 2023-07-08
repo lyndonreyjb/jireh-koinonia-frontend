@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
-import Ministries from "./Ministries";
+import MinistriesLink from "./MinistriesLink";
 
 const Connect = () => {
   const [header, setHeader] = useState([]);
@@ -53,7 +53,7 @@ const Connect = () => {
         </div>
       </div>
       <div>
-        <Ministries />
+        <MinistriesLink />
       </div>
     </div>
   );

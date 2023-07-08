@@ -62,7 +62,6 @@ const Landing = () => {
           </div>
         </div>
       ))}
-      {/*  */}
       <Welcome />
       <Connect />
       <MapBox />
