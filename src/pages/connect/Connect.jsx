@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
 import MinistriesLink from "./MinistriesLink";
-
+import { motion } from "framer-motion";
 const Connect = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,31 +27,38 @@ const Connect = () => {
     return <Loading />;
   }
   return (
-    <div
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${urlFor(
-          header[0].image
-        ).toString()})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="items-center justify-center ">
-      <div className="p-0 md:p-28 flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-4/6 p-8 flex justify-center items-center">
-          <div>
-            <h3 className="text-neutral-100 md:text-2xl font-extrabold text-md mb-4">
-              Connect With Us
-            </h3>
-            <h2 className="text-neutral-100 md:text-3xl font-extrabold text-3xl">
-              {header[0].title}
-            </h2>
-            <p className="mt-4 text-neutral-100 md:text-md text-md">
-              {header[0].description}
-            </p>
+    <div>
+      {header.map((hero) => (
+        <div
+          className="relative"
+          key={hero._id}
+          style={{
+            height: "70vh",
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${urlFor(
+              hero.image
+            ).toString()})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
+          <div className=" flex flex-col w-full h-full justify-center items-center">
+            <motion.div
+              whileInView={{ y: [20, 0], opacity: [0, 1] }}
+              transition={{ duration: 1.5 }}
+              className="w-5/6 md:w-3/6 mx-auto md:mx-0">
+              <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
+                Connect With Us
+              </h2>
+              <h2 className="mt-4 text-neutral-100 md:text-3xl font-extrabold text-2xl text-center md:text-left">
+                {hero.title}
+              </h2>
+              <p className="mt-4 text-neutral-100 md:text-md text-md text-center md:text-left">
+                {hero.description}
+              </p>
+            </motion.div>
           </div>
         </div>
-      </div>
+      ))}
       <div>
         <MinistriesLink />
       </div>
