@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
 import MinistriesLink from "./MinistriesLink";
-import { motion } from "framer-motion";
+
 const Connect = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,10 +42,7 @@ const Connect = () => {
             backgroundRepeat: "no-repeat",
           }}>
           <div className=" flex flex-col w-full h-full justify-center items-center">
-            <motion.div
-              whileInView={{ y: [20, 0], opacity: [0, 1] }}
-              transition={{ duration: 1.5 }}
-              className="w-5/6 md:w-3/6 mx-auto md:mx-0">
+            <div className="w-5/6 md:w-3/6 mx-auto md:mx-0">
               <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
                 Connect With Us
               </h2>
@@ -55,7 +52,7 @@ const Connect = () => {
               <p className="mt-4 text-neutral-100 md:text-md text-md text-center md:text-left">
                 {hero.description}
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       ))}

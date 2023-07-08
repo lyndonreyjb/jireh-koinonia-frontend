@@ -5,7 +5,6 @@ import bg from "../../assets/bg.jpg";
 import Loading from "../../Loading";
 import Socials from "./Socials";
 import MapBox from "../../MapBox";
-import { motion } from "framer-motion";
 const Contact = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,17 +44,14 @@ const Contact = () => {
             backgroundRepeat: "no-repeat",
           }}>
           <div className=" flex flex-col w-full h-full justify-center items-center">
-            <motion.div
-              whileInView={{ y: [20, 0], opacity: [0, 1] }}
-              transition={{ duration: 1.5 }}
-              className="w-5/6 md:w-3/6 mx-auto md:mx-0">
+            <div className="w-5/6 md:w-3/6 mx-auto md:mx-0">
               <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
                 {hero.title}
               </h2>
               <p className="mt-4 text-neutral-100 md:text-md text-md text-center md:text-left">
                 {hero.description}
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       ))}
