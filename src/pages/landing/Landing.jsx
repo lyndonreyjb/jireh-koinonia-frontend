@@ -9,6 +9,15 @@ const Landing = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const transition = {
+    duration: 1.5,
+    ease: "easeOut", // Apply a specific easing function for a smoother transition
+  };
+
+  const variants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -30,7 +39,7 @@ const Landing = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-200">
+    <div className="min-h-screen bg-neutral-900">
       {header.map((hero, index) => (
         <div
           className="h-screen relative"
@@ -62,8 +71,11 @@ const Landing = () => {
           </div>
         </div>
       ))}
+
       <Welcome />
+
       <Connect />
+
       <MapBox />
     </div>
   );

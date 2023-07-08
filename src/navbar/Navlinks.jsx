@@ -17,7 +17,6 @@ const NavLinks = () => {
   const handleNavLinkClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Add smooth scroll behavior
     });
   };
 

@@ -5,6 +5,7 @@ import bg from "../../assets/bg.jpg";
 import Loading from "../../Loading";
 import Socials from "./Socials";
 import MapBox from "../../MapBox";
+import { motion } from "framer-motion";
 const Contact = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,7 +13,7 @@ const Contact = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const query = '*[_type == "post"]';
+      const query = '*[_type == "contact"]';
       const data = await client.fetch(query);
       setHeader(data);
     } catch (e) {
@@ -29,39 +30,38 @@ const Contact = () => {
     return <Loading />;
   }
   return (
-    <div className="min-h-screen bg-neutral-900">
-      {header.map((hero, index) => (
+    <div className="bg-neutral-900">
+      {header.map((hero) => (
         <div
           className="relative"
-          key={hero.title + index}
+          key={hero._id}
           style={{
             height: "70vh",
-            backgroundImage: `url(${urlFor(hero.mainImage).toString()})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${urlFor(
+              hero.image
+            ).toString()})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="flex flex-col text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-            <div className="text-xl uppercase ">
-              <div className="flex py-5 items-center">
-                <div className="flex-grow border-t border-gray-300"></div>
-                <span className="flex-shrink mx-4 text-gray-300">
-                  {hero.title}
-                </span>
-                <div className="flex-grow border-t border-gray-300"></div>
-              </div>
-            </div>
-
-            <div className="mt-4  text-slate-300 md:text-xl text-lg ">
-              {hero.description2}
-            </div>
+          <div className=" flex flex-col w-full h-full justify-center items-center">
+            <motion.div
+              whileInView={{ y: [20, 0], opacity: [0, 1] }}
+              transition={{ duration: 1.5 }}
+              className="w-5/6 md:w-3/6 mx-auto md:mx-0">
+              <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
+                {hero.title}
+              </h2>
+              <p className="mt-4 text-neutral-100 md:text-md text-md text-center md:text-left">
+                {hero.description}
+              </p>
+            </motion.div>
           </div>
         </div>
       ))}
-      <div>
-        <Socials />
-      </div>
+
+      <Socials />
+
       <div className="flex justify-center items-center  relative">
         <div className="flex flex-col md:flex-row w-full md:w-4/5">
           <div
@@ -113,7 +113,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <MapBox />
+      <div>
+        <MapBox />
+      </div>
     </div>
   );
 };
