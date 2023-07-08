@@ -1,11 +1,17 @@
 import { NavLink } from "react-router-dom";
 const MinistriesLink = () => {
   const scrollToTop = () => {
+    const windowHeight = window.innerHeight;
+    const offsetVh = 62;
+
+    const offsetPixels = (windowHeight * offsetVh) / 100;
+
     window.scrollTo({
-      top: 450,
-      behavior: "instant",
+      top: offsetPixels,
+      behavior: "smooth",
     });
   };
+
   return (
     <div className="text-neutral-100">
       <div className="h-20 grid grid-cols-4 bg-neutral-900">
