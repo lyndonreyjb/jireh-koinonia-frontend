@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
-import MinistriesLink from "./MinistriesLink";
-import { Outlet } from "react-router-dom";
+import MinistriesLink from "../connect/MinistriesLink";
 
-const Connect = () => {
+const ConnectLanding = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -45,7 +44,7 @@ const Connect = () => {
           <div className=" flex flex-col w-full h-full justify-center items-center">
             <div className="w-5/6 md:w-3/6 mx-auto md:mx-0">
               <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
-                Connect With Us
+                ConnectLanding With Us
               </h2>
               <h2 className="mt-4 text-neutral-100 md:text-3xl font-extrabold text-2xl text-center md:text-left">
                 {hero.title}
@@ -60,9 +59,8 @@ const Connect = () => {
       <div>
         <MinistriesLink />
       </div>
-      <Outlet />
     </div>
   );
 };
 
-export default Connect;
+export default ConnectLanding;

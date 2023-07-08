@@ -9,6 +9,10 @@ import {
   WhatWeBelieve,
   WhoWeAre,
   Connect,
+  Kids,
+  Youth,
+  Men,
+  Women,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -23,6 +27,24 @@ const router = createBrowserRouter([
       {
         path: "connect",
         element: <Connect />,
+        children: [
+          {
+            path: "kids",
+            element: <Kids />,
+          },
+          {
+            path: "youth",
+            element: <Youth />,
+          },
+          {
+            path: "men",
+            element: <Men />,
+          },
+          {
+            path: "women",
+            element: <Women />,
+          },
+        ],
       },
       {
         path: "contact",

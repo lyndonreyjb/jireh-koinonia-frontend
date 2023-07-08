@@ -20,7 +20,7 @@ const Layout = () => {
         }
       />
 
-      <footer className="mt-auto text-center text-neutral-600 bg-neutral-900 dark:text-neutral-200 lg:text-left">
+      <footer className="mt-auto  text-center text-neutral-600 bg-neutral-900 dark:text-neutral-200 lg:text-left">
         <Footer />
       </footer>
     </div>
