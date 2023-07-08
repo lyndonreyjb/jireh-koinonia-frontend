@@ -3,7 +3,7 @@ import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
 import Welcome from "./Welcome";
 import MapBox from "../../MapBox";
-import Connect from "../connect/Connect";
+import ConnectLanding from "./ConnectLanding";
 
 const Landing = () => {
   const [header, setHeader] = useState([]);
@@ -74,7 +74,7 @@ const Landing = () => {
 
       <Welcome />
 
-      <Connect />
+      <ConnectLanding />
 
       <MapBox />
     </div>

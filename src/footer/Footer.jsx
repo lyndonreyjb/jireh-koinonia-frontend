@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Newsletter */}
-      <div className="col-span-4   flex justify-center pt-10 ">
+      <div className="col-span-4 p-14 flex justify-center">
         <form action="#" className="w-5/6 md:w-2/4">
           <div className="gird-cols-3 grid gap-4 ">
             <h6 className=" flex justify-center font-semibold uppercase md:justify-start">

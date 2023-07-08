@@ -17,6 +17,7 @@ const NavLinks = () => {
   const handleNavLinkClick = () => {
     window.scrollTo({
       top: 0,
+      behavior: "instant",
     });
   };
 
