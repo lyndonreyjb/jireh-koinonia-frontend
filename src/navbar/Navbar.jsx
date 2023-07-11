@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav
       className={`z-40 fixed top-0 flex items-center justify-center w-full shadow ${navbarBg} transition-colors duration-500 ease-in-out`}>
       <div className="w-11/12  flex justify-between">
-        <NavLink to="/" onClick={handleNavLinkClick}>
+        <NavLink to="" onClick={handleNavLinkClick}>
           <img src={logo} className="h-16 p-2" />
         </NavLink>
         <div className="flex justify-end items-center">

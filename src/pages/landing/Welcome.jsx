@@ -30,7 +30,7 @@ const Welcome = () => {
   return (
     <div className="bg-neutral-900 flex items-center justify-center">
       <motion.div
-        whileInView={{ y: [20, 0], opacity: [0, 1] }}
+        whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         className="p-0 md:p-20 flex flex-col md:flex-row w-full">
         <div className="w-full md:w-3/6 ">

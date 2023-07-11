@@ -1,5 +1,5 @@
 export { default as Layout } from "../pages/Layout";
-export { default as Landing } from "../pages/landing/Landing";
+export { default as Landing } from "./landing/Landing";
 export { default as About } from "../pages/about/About";
 export { default as Contact } from "../pages/contact/Contact";
 export { default as Connect } from "../pages/connect/Connect";

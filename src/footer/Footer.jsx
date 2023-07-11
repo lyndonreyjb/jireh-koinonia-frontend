@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiTwotonePhone, AiFillHome } from "react-icons/ai";
+import { VscSend } from "react-icons/vsc";
 import { IoMail } from "react-icons/io5";
 import { client } from "../client";
 import Loading from "../Loading";
@@ -31,7 +32,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Newsletter */}
-      <div className="col-span-4 p-14 flex justify-center">
+      <div className="col-span-4 p-10 pb-4 md:p-14  flex justify-center">
         <form action="#" className="w-5/6 md:w-2/4">
           <div className="gird-cols-3 grid gap-4 ">
             <h6 className=" flex justify-center font-semibold uppercase md:justify-start">
@@ -49,8 +50,11 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-yellow-600 hover:bg-yellow-500  text-white  rounded-r-md w-1/5">
-                  Submit
+                  className="bg-yellow-600 hover:bg-yellow-500 text-white rounded-r-md w-2/5 md:w-1/5 flex justify-center items-center">
+                  <span className="hidden md:block">Submit</span>
+                  <div className=" block md:hidden text-2xl">
+                    <VscSend />
+                  </div>
                 </button>
               </div>
 

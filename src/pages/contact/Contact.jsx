@@ -58,10 +58,12 @@ const Contact = () => {
 
       <Socials />
 
-      <div className="flex justify-center items-center  relative">
-        <div className="flex flex-col md:flex-row w-full md:w-4/5">
+      <div
+        id="get-connected"
+        className="min-h-screen flex justify-center items-center  relative">
+        <div className="flex flex-col md:flex-row w-full h-full ">
           <div
-            className=" w-full flex justify-center items-center"
+            className=" w-full  flex justify-center items-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg.toString()})`,
               backgroundSize: "cover",
@@ -71,13 +73,15 @@ const Contact = () => {
             <RandomVerse />
           </div>
 
-          <div className="w-full md:w-5/6 flex justify-center items-center p-10 mx-auto  bg-slate-200">
+          <div className="w-full h-screen md:w-3/6  flex justify-center items-center p-4 md:p-8 mx-auto  bg-neutral-900">
             <div className="w-full">
-              <h1 className="text-5xl text-center uppercase">Chat with us</h1>
+              <h1 className="text-neutral-100 text-4xl text-center uppercase">
+                Chat with us
+              </h1>
               <h3 className="text-2xl text-center uppercase mt-2 text-yellow-600">
                 Get in contact with us
               </h3>
-              <form className="mt-4">
+              <form className="mt-4 ">
                 <div className="flex flex-col">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input

@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {
   About,
@@ -15,67 +15,25 @@ import {
   Women,
 } from "./pages";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Landing />,
-      },
-      {
-        path: "connect",
-        element: <Connect />,
-        children: [
-          {
-            path: "kids",
-            element: <Kids />,
-          },
-          {
-            path: "youth",
-            element: <Youth />,
-          },
-          {
-            path: "men",
-            element: <Men />,
-          },
-          {
-            path: "women",
-            element: <Women />,
-          },
-        ],
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-      {
-        path: "about",
-        element: <About />,
-        children: [
-          {
-            path: "our-location",
-            element: <OurLocation />,
-          },
-          {
-            path: "what-we-believe",
-            element: <WhatWeBelieve />,
-          },
-          {
-            path: "who-we-are",
-            element: <WhoWeAre />,
-          },
-        ],
-      },
-    ],
-  },
-]);
-
 function App() {
   return (
     <div>
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Landing />} />
+            <Route path="contact" element={<Contact />} />
+
+            <Route path="connect/" element={<Connect />} />
+
+            <Route path="about/" element={<About />}>
+              <Route path="our-location" element={<OurLocation />} />
+              <Route path="what-we-believe" element={<WhatWeBelieve />} />
+              <Route path="who-we-are" element={<WhoWeAre />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
