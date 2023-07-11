@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleNavLinkClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Add smooth scroll behavior
+      behavior: "instants",
     });
   };
 
