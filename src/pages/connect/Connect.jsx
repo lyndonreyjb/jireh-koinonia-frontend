@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import Loading from "../../Loading";
 import MinistriesLink from "./MinistriesLink";
-import { Outlet } from "react-router-dom";
+import Ministries from "./Ministries";
 
 const Connect = () => {
   const [header, setHeader] = useState([]);
@@ -60,7 +60,7 @@ const Connect = () => {
       <div>
         <MinistriesLink />
       </div>
-      <Outlet />
+      <Ministries />
     </div>
   );
 };

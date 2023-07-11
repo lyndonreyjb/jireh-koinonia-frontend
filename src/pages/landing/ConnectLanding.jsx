@@ -44,7 +44,7 @@ const ConnectLanding = () => {
           <div className=" flex flex-col w-full h-full justify-center items-center">
             <div className="w-5/6 md:w-3/6 mx-auto md:mx-0">
               <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
-                ConnectLanding With Us
+                Connect With Us
               </h2>
               <h2 className="mt-4 text-neutral-100 md:text-3xl font-extrabold text-2xl text-center md:text-left">
                 {hero.title}
