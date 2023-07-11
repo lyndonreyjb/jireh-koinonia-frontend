@@ -73,9 +73,9 @@ const Contact = () => {
             <RandomVerse />
           </div>
 
-          <div className="w-full h-screen md:w-3/6  flex justify-center items-center p-4 md:p-8 mx-auto  bg-neutral-900">
+          <div className="w-full h-screen md:w-3/6  flex justify-center items-center p-4 md:p-8 mx-auto  bg-neutral-100">
             <div className="w-full">
-              <h1 className="text-neutral-100 text-4xl text-center uppercase">
+              <h1 className="text-neutral-900 text-4xl text-center uppercase">
                 Chat with us
               </h1>
               <h3 className="text-2xl text-center uppercase mt-2 text-yellow-600">

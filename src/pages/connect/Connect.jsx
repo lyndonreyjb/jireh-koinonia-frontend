@@ -29,6 +29,7 @@ const Connect = () => {
   }
   return (
     <div>
+      <div></div>
       {header.map((hero) => (
         <div
           className="relative"
