@@ -3,14 +3,10 @@ import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
+
 const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow ">
-        <Outlet />
-      </main>
-
       <ScrollToTop
         smooth
         component={
@@ -19,10 +15,11 @@ const Layout = () => {
           </div>
         }
       />
-
-      <footer className="mt-auto  text-center text-neutral-600 bg-neutral-900 dark:text-neutral-200 lg:text-left">
-        <Footer />
-      </footer>
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };

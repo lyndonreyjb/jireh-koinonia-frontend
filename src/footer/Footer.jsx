@@ -32,10 +32,10 @@ const Footer = () => {
   return (
     <footer>
       {/* Newsletter */}
-      <div className="col-span-4 p-10 pb-4 md:p-14  flex justify-center">
+      <div className="col-span-4 p-10 pb-4 md:p-14  flex justify-center bg-neutral-900">
         <form action="#" className="w-5/6 md:w-2/4">
           <div className="gird-cols-3 grid gap-4 ">
-            <h6 className=" flex justify-center font-semibold uppercase md:justify-start">
+            <h6 className=" text-neutral-100 flex justify-center font-semibold uppercase md:justify-start">
               Sign up for a Newsletter
             </h6>
 
@@ -76,65 +76,63 @@ const Footer = () => {
 
       {/*  */}
 
-      <div className="w-5/6 md:container mx-auto py-10 text-center md:text-left">
-        {footer.length > 0 && (
-          <div className="flex-cols h-full md:flex text-neutral-200">
-            <div className="w-full md:w-3/6 mt-3 md:mt-0">
-              <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
-                {footer[1].title}
-              </h2>
+      <div className=" mx-auto p-10 md:p-14 text-center md:text-left bg-neutral-900">
+        <div className="flex-cols w-full h-full md:flex text-neutral-200">
+          <div className="w-full md:w-3/6 mt-3 md:mt-0">
+            <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
+              {footer[1].title}
+            </h2>
 
-              <p>{footer[1].description}</p>
-            </div>
+            <p>{footer[1].description}</p>
+          </div>
 
-            <div className="mx-aut mt-3 md:mt-0">
-              <h6 className="mb-4  text-2xl flex justify-center font-semibold uppercase md:justify-start">
-                {footer[0].title}
-              </h6>
-              <div className="flex text-2xl justify-center">
-                <div className="mr-2">
-                  <a
-                    href="#!"
-                    className="text-neutral-200  hover:text-yellow-600">
-                    <FaInstagram />
-                  </a>
-                </div>
-                <div className="">
-                  <a
-                    href="#!"
-                    className="text-neutral-200  hover:text-yellow-600">
-                    <FaFacebook />
-                  </a>
-                </div>
+          <div className="mx-auto mt-3 md:mt-0">
+            <h6 className="mb-4  text-2xl flex justify-center font-semibold uppercase md:justify-start">
+              {footer[0].title}
+            </h6>
+            <div className="flex text-2xl justify-center">
+              <div className="mr-2">
+                <a
+                  href="#!"
+                  className="text-neutral-200  hover:text-yellow-600">
+                  <FaInstagram />
+                </a>
               </div>
-            </div>
-
-            {/* Contacts */}
-            <div className="mx-auto mt-3 md:mt-0">
-              <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase md:justify-start">
-                {footer[2].title}
-              </h6>
-              <div className="mb-4 flex items-center justify-center md:justify-start">
-                <AiFillHome />
-                <p className="ml-2">{footer[2].address}</p>
-              </div>
-              <div className="mb-4 flex items-center justify-center md:justify-start">
-                <IoMail />
-                <p className="ml-2">{footer[2].email}</p>
-              </div>
-              <div className="mb-4 flex items-center justify-center md:justify-start">
-                <AiTwotonePhone />
-                <p className="ml-2">{footer[2].phone}</p>
+              <div className="">
+                <a
+                  href="#!"
+                  className="text-neutral-200  hover:text-yellow-600">
+                  <FaFacebook />
+                </a>
               </div>
             </div>
           </div>
-        )}
+
+          {/* Contacts */}
+          <div className="mx-auto mt-3 md:mt-0">
+            <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase md:justify-start">
+              {footer[2].title}
+            </h6>
+            <div className="mb-4 flex items-center justify-center md:justify-start">
+              <AiFillHome />
+              <p className="ml-2">{footer[2].address}</p>
+            </div>
+            <div className="mb-4 flex items-center justify-center md:justify-start">
+              <IoMail />
+              <p className="ml-2">{footer[2].email}</p>
+            </div>
+            <div className="mb-4 flex items-center justify-center md:justify-start">
+              <AiTwotonePhone />
+              <p className="ml-2">{footer[2].phone}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Copyright: </span>
+      <div className="bg-neutral-800 p-2 text-center">
+        <span className="text-neutral-300">© 2023 Copyright: </span>
         <a
-          className="font-semibold text-neutral-600 dark:text-neutral-400"
+          className="font-semibold text-neutral-400"
           href="https://tailwind-elements.com/">
           Jireh Koinonia Calgary
         </a>
