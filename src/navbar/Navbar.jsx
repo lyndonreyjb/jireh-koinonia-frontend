@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import churchB from "../assets/churchB.png";
 import churchW from "../assets/churchW.png";
 import { NavLink } from "react-router-dom";
-import NavLinks from "./NavLinks";
+import NavLinks from "./Navlinks";
 
 import Sidebar from "../sidebar/Sidebar";
 const Navbar = () => {
