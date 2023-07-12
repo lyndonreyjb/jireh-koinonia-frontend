@@ -5,7 +5,7 @@ const OurLocation = () => {
   return (
     <div>
       <h1 className="md:mb-12 uppercase p-8 text-3xl md:text-5xl font-extrabold text-center">
-        Join Us
+        Our Location
       </h1>
       <div>
         <Socials />

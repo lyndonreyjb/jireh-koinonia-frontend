@@ -28,7 +28,7 @@ const RandomVerse = () => {
   }
 
   return (
-    <div className="w-5/6 h-96 flex justify-center items-center">
+    <div className="w-5/6 flex justify-center items-center">
       <div className="text-center flex flex-col">
         <p className=" text-2xl md:text-3xl font-bold text-yellow-500">
           {header[randomIndex].title}

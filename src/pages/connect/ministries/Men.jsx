@@ -15,7 +15,7 @@ const Men = ({ header, urlFor }) => {
         </div>
         <div className="text-neutral-100 w-full md:w-4/6 p-8 flex justify-center items-center">
           <div>
-            <h2 className="uppercase text-yellow-600 md:text-lg font-extrabold text-lg">
+            <h2 className="uppercase text-yellow-600 md:text-lg font-medium text-lg">
               {ministry[2].title}
             </h2>
             <h2 className=" mt-4 md:text-3xl font-bold text-2xl">

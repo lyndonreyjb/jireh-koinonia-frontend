@@ -20,7 +20,7 @@ const ConnectGroup = ({ header, urlFor }) => {
         </div>
         <div className="w-full text-neutral-900 md:w-4/6 p-8 flex justify-center items-center md:order-1">
           <div>
-            <h2 className="md:text-3xl font-extrabold text-3xl">
+            <h2 className="md:text-3xl font-extrabold text-yellow-600 text-3xl">
               {ministry[0].title}
             </h2>
             <p className="mt-4 md:text-md text-md">{ministry[0].description}</p>

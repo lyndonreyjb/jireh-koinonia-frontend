@@ -17,7 +17,7 @@ const Women = ({ header, urlFor }) => {
         </div>
         <div className="w-full text-neutral-900 md:w-4/6 p-8 flex justify-center items-center md:order-1">
           <div>
-            <h2 className="uppercase text-yellow-600 md:text-lg font-extrabold text-lg">
+            <h2 className="uppercase text-yellow-600 md:text-lg font-medium text-lg">
               {ministry[4].title}
             </h2>
             <h2 className=" mt-4 md:text-3xl font-bold text-2xl">

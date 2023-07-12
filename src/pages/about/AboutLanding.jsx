@@ -59,24 +59,26 @@ const AboutLanding = () => {
       ))}
       <div className=" flex justify-center items-center">
         <div className="md:w-3/6 flex flex-col md:flex-row  justify-center items-center">
-          <div className=" p-4 md:p-10 md:order-2 ">
-            <h1 className="font-bold text-5xl">About Us</h1>
-            <p className="mt-4">
-              We believe that the journey of faith is not meant to be walked
-              alone. It is in community, together with fellow believers, that we
-              find encouragement, support, and a deeper understanding of God's
-              love and purpose for our lives. Whether you are just starting to
-              explore your faith or have been on this journey for a while, we
-              invite you to join us as we grow and learn together.
-            </p>
-            <p className="mt-4">
-              Whether you are seeking answers, longing for deeper connections,
-              or desiring to make a difference, we invite you to be a part of
-              our church family. Join us as we journey together, supporting one
-              another, growing in faith, and impacting the world around us. We
-              look forward to meeting you and walking alongside you on this
-              incredible adventure of faith.
-            </p>
+          <div className="p-8 md:p-10 md:order-2 ">
+            <div>
+              <h1 className="font-bold text-5xl text-center">About Us</h1>
+              <p className="mt-4">
+                We believe that the journey of faith is not meant to be walked
+                alone. It is in community, together with fellow believers, that
+                we find encouragement, support, and a deeper understanding of
+                God's love and purpose for our lives. Whether you are just
+                starting to explore your faith or have been on this journey for
+                a while, we invite you to join us as we grow and learn together.
+              </p>
+              <p className="mt-4">
+                Whether you are seeking answers, longing for deeper connections,
+                or desiring to make a difference, we invite you to be a part of
+                our church family. Join us as we journey together, supporting
+                one another, growing in faith, and impacting the world around
+                us. We look forward to meeting you and walking alongside you on
+                this incredible adventure of faith.
+              </p>
+            </div>
           </div>
           <div className="h-full w-full grid grid-cols-3  bg-neutral-900">
             <NavLink
