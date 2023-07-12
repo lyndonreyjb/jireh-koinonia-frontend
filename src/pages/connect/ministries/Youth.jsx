@@ -40,7 +40,7 @@ const Youth = ({ header, urlFor }) => {
               <a
                 target="_blank"
                 href="https://www.facebook.com/groups/3442503869169735/"
-                className="flex items-center justify-center h-14 w-44  rounded-lg bg-yellow-600 hover:bg-yellow-500 hover:scale-90 text-white transition-all duration-300">
+                className="text-sm flex items-center justify-center h-14 w-44  rounded-lg bg-yellow-600 hover:bg-yellow-500 hover:scale-90 text-white transition-all duration-300">
                 Get Connected
                 <div className="ml-2">
                   <BsArrowRightShort className="text-3xl transition-transform duration-300 transform-gpu" />

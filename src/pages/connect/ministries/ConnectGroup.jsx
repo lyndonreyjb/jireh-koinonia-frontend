@@ -26,7 +26,7 @@ const ConnectGroup = ({ header, urlFor }) => {
             <p className="mt-4 md:text-md text-md">{ministry[0].description}</p>
             <HashLink
               to="/contact#get-connected"
-              className="flex items-center justify-center mt-4 h-14 w-44 rounded-lg bg-yellow-600 hover:bg-yellow-500 hover:scale-90 text-white transition-all duration-300">
+              className="text-sm flex items-center justify-center mt-4 h-14 w-44 rounded-lg bg-yellow-600 hover:bg-yellow-500 hover:scale-90 text-white transition-all duration-300">
               Get Connected
               <div className="ml-2">
                 <BsArrowRightShort className="text-3xl transition-transform duration-300 transform-gpu" />
