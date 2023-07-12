@@ -28,8 +28,8 @@ function App() {
               <Route path="what-we-believe" element={<WhatWeBelieve />} />
               <Route path="who-we-are" element={<WhoWeAre />} />
             </Route>
-            <Route path="*" element={<Error />} />
           </Route>
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
