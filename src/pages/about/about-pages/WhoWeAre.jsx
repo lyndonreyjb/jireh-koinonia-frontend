@@ -38,7 +38,7 @@ const WhoWeAre = () => {
             <div className="absolute -top-2 -right-2 md:-top-5 md:-left-5 bg-neutral-900 text-neutral-100 text-2xl h-14 w-14 flex justify-center items-center font-bold">
               {index + 1}
             </div>
-            <h1 className="uppercase text-2xl md:text-4xl font-extrabold">
+            <h1 className="uppercase w-5/6 text-2xl md:text-4xl font-extrabold">
               {values.title}
             </h1>
             <p className="mt-2">{values.description}</p>
