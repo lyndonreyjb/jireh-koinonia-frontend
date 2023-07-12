@@ -36,7 +36,7 @@ const Socials = () => {
           <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
             Phone
           </h3>
-          <p>+ 01 234 567 88</p>
+          <p>+ 403 555 5555</p>
         </div>
       </div>
     </div>
