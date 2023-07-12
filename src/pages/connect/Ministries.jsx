@@ -34,9 +34,9 @@ const Ministries = () => {
   return (
     <div>
       <ConnectGroup header={header} urlFor={urlFor} />
-      <Men header={header} urlFor={urlFor} />
-      <Women header={header} urlFor={urlFor} />
       <Youth header={header} urlFor={urlFor} />
+      <Women header={header} urlFor={urlFor} />
+      <Men header={header} urlFor={urlFor} />
       <Kids header={header} urlFor={urlFor} />
     </div>
   );

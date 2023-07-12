@@ -4,11 +4,11 @@ const Women = ({ header, urlFor }) => {
   return (
     <div
       id="women"
-      className="bg-neutral-100 min-h-screen flex items-center justify-center">
+      className="bg-neutral-100  flex items-center justify-center">
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        className="p-0 md:p-20 flex flex-col md:flex-row h-full w-full">
+        className="md:w-5/6 p-0 md:p-20 flex flex-col md:flex-row h-full w-full">
         <div className="w-full md:w-3/6 md:order-2">
           <img
             src={urlFor(ministry[4].image)}
@@ -20,7 +20,7 @@ const Women = ({ header, urlFor }) => {
             <h2 className="uppercase text-yellow-600 md:text-lg font-extrabold text-lg">
               {ministry[4].title}
             </h2>
-            <h2 className=" mt-4 md:text-3xl font-extrabold text-3xl">
+            <h2 className=" mt-4 md:text-3xl font-bold text-2xl">
               An empowering community for women to cultivate authentic
               connections.
             </h2>

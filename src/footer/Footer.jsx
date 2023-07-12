@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Newsletter */}
-      <div className="col-span-4 p-10 pb-4 md:p-14  flex justify-center bg-neutral-900">
+      <div className="col-span-4 p-10  md:p-14  flex justify-center bg-neutral-900">
         <form action="#" className="w-5/6 md:w-2/4">
           <div className="gird-cols-3 grid gap-4 ">
             <h6 className=" text-neutral-100 flex justify-center font-semibold uppercase md:justify-start">
@@ -76,7 +76,7 @@ const Footer = () => {
 
       {/*  */}
 
-      <div className=" mx-auto p-10 md:p-14 text-center md:text-left bg-neutral-900">
+      <div className=" mx-auto p-10 md:px-56 text-center md:text-left bg-neutral-900">
         <div className="flex-cols w-full h-full md:flex text-neutral-200">
           <div className="w-full md:w-3/6 mt-3 md:mt-0">
             <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
@@ -129,13 +129,24 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-neutral-800 p-2 text-center">
-        <span className="text-neutral-300">© 2023 Copyright: </span>
-        <a
-          className="font-semibold text-neutral-400"
-          href="https://tailwind-elements.com/">
-          Jireh Koinonia Calgary
-        </a>
+      <div className="bg-neutral-800 p-2 text-center flex justify-between">
+        <div>
+          <span className="text-neutral-300">© 2023 Copyright: </span>
+          <a className="font-semibold text-neutral-400" href="">
+            Jireh Koinonia Calgary
+          </a>
+        </div>
+
+        <span
+          className="text-gray-500 text-xs hover:text-yellow-600 cursor-pointer"
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/lyndon-rey-bualat/",
+              "_blank"
+            )
+          }>
+          Design By Lyndon
+        </span>
       </div>
     </footer>
   );

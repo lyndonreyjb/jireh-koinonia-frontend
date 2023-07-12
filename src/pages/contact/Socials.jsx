@@ -11,8 +11,8 @@ const Socials = () => {
               <AiFillHome className="text-white" />
             </div>
           </div>
-          <h3 className="font-extrabold text-md mt-4 text-slate-900">
-            Address:
+          <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
+            Join Us
           </h3>
           <p>5510 26 Ave NE, Calgary, AB T1Y 6S1</p>
         </div>
@@ -22,7 +22,9 @@ const Socials = () => {
               <IoMail className="text-white" />
             </div>
           </div>
-          <h3 className="font-extrabold text-md mt-4 text-slate-900">Email:</h3>
+          <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
+            Email
+          </h3>
           <p>Jirehkoinoniacalgary@gmail.com</p>
         </div>
         <div className="flex flex-col items-center justify-center md:justify-start text-center">
@@ -31,7 +33,9 @@ const Socials = () => {
               <AiTwotonePhone className="text-white" />
             </div>
           </div>
-          <h3 className="font-extrabold text-md mt-4 text-slate-900">Phone:</h3>
+          <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
+            Phone
+          </h3>
           <p>+ 01 234 567 88</p>
         </div>
       </div>

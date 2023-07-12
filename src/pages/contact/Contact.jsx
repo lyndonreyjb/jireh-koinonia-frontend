@@ -1,7 +1,7 @@
 import RandomVerse from "../RandomVerse";
 import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
-import bg from "../../assets/bg.jpg";
+import bible from "../../assets/bible.jpg";
 import Loading from "../../Loading";
 import Socials from "./Socials";
 import MapBox from "../../MapBox";
@@ -29,7 +29,7 @@ const Contact = () => {
     return <Loading />;
   }
   return (
-    <div className="bg-neutral-900">
+    <div className="">
       {header.map((hero) => (
         <div
           className="relative"
@@ -56,16 +56,14 @@ const Contact = () => {
         </div>
       ))}
 
-      <Socials />
-
-      <div
-        id="get-connected"
-        className="min-h-screen flex justify-center items-center  relative">
-        <div className="flex flex-col md:flex-row w-full h-full ">
+      <div className="md:min-h-screen  flex  justify-center items-center  relative">
+        <div
+          id="get-connected"
+          className="flex flex-col shadow-lg md:flex-row w-full md:w-5/6  h-full ">
           <div
             className=" w-full  flex justify-center items-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bg.toString()})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${bible.toString()})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -73,7 +71,7 @@ const Contact = () => {
             <RandomVerse />
           </div>
 
-          <div className="w-full h-screen md:w-3/6  flex justify-center items-center p-4 md:p-8 mx-auto  bg-neutral-100">
+          <div className="md:w-3/6 w-full flex justify-center items-center p-4 md:p-8 mx-auto bg-white ">
             <div className="w-full">
               <h1 className="text-neutral-900 text-4xl text-center uppercase">
                 Chat with us
@@ -113,9 +111,10 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div>
-        <MapBox />
-      </div>
+
+      <Socials />
+
+      <MapBox />
     </div>
   );
 };

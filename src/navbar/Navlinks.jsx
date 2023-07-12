@@ -20,6 +20,13 @@ const NavLinks = () => {
       behavior: "instant",
     });
   };
+  const handleNavClick = () => {
+    const scrollHeight = window.innerHeight * 0.6;
+    window.scrollTo({
+      top: scrollHeight,
+      behavior: "instant",
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,19 +67,19 @@ const NavLinks = () => {
             <NavLink
               to="/about/who-we-are"
               className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
-              onClick={handleNavLinkClick}>
+              onClick={handleNavClick}>
               Who We Are
             </NavLink>
             <NavLink
               to="/about/what-we-believe"
               className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
-              onClick={handleNavLinkClick}>
+              onClick={handleNavClick}>
               What We Believe
             </NavLink>
             <NavLink
               to="/about/our-location"
               className="block px-4 py-2 text-slate-800 hover:bg-gray-200 nav-link"
-              onClick={handleNavLinkClick}>
+              onClick={handleNavClick}>
               Our Location
             </NavLink>
           </div>

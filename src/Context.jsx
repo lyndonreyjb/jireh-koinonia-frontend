@@ -10,6 +10,18 @@ export const AppProvider = ({ children }) => {
     setIsSidebarOpen(true);
   };
   const closeSidebar = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+    setIsSidebarOpen(false);
+  };
+  const closeAboutSidebar = () => {
+    const scrollHeight = window.innerHeight * 0.6;
+    window.scrollTo({
+      top: scrollHeight,
+      behavior: "instant",
+    });
     setIsSidebarOpen(false);
   };
   const toggleAboutDropdown = () => {
@@ -21,6 +33,7 @@ export const AppProvider = ({ children }) => {
         isSidebarOpen,
         toggleAboutDropdown,
         aboutDropdownOpen,
+        closeAboutSidebar,
         openSidebar,
         closeSidebar,
         pageId,

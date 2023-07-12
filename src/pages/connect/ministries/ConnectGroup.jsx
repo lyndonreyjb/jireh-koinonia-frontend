@@ -7,11 +7,11 @@ const ConnectGroup = ({ header, urlFor }) => {
   return (
     <div
       id="connect-group"
-      className="bg-neutral-100 min-h-screen flex items-center justify-center">
+      className="bg-neutral-100  flex items-center justify-center">
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        className="p-0 md:p-20 flex flex-col md:flex-row h-full w-full">
+        className="p-0 md:p-20 flex flex-col md:flex-row h-full md:w-5/6">
         <div className="w-full md:w-3/6 md:order-2">
           <img
             src={urlFor(ministry[0].image)}

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {
-  About,
+  AboutLayout,
   Contact,
   Layout,
   Landing,
@@ -9,10 +9,7 @@ import {
   WhatWeBelieve,
   WhoWeAre,
   Connect,
-  Kids,
-  Youth,
-  Men,
-  Women,
+  Error,
 } from "./pages";
 
 function App() {
@@ -26,11 +23,12 @@ function App() {
 
             <Route path="connect/" element={<Connect />} />
 
-            <Route path="about/" element={<About />}>
+            <Route path="about/" element={<AboutLayout />}>
               <Route path="our-location" element={<OurLocation />} />
               <Route path="what-we-believe" element={<WhatWeBelieve />} />
               <Route path="who-we-are" element={<WhoWeAre />} />
             </Route>
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>

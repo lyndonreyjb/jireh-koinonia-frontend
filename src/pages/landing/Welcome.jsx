@@ -8,6 +8,13 @@ const Welcome = () => {
   const [welcome, setWelcome] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -51,6 +58,7 @@ const Welcome = () => {
               {welcome[0].description}
             </p>
             <NavLink
+              onClick={scrollToTop}
               to="/about"
               className="flex items-center justify-center mt-4 h-14 w-44 rounded-lg bg-yellow-600 hover:bg-yellow-500 hover:scale-90 text-white transition-all duration-300">
               About Us
