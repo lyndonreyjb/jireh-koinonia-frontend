@@ -46,7 +46,7 @@ const ConnectLanding = () => {
               <h2 className="text-neutral-100 md:text-5xl font-extrabold text-4xl text-center md:text-left">
                 Connect With Us
               </h2>
-              <h2 className="mt-4 text-neutral-100 md:text-3xl font-extrabold text-2xl text-center md:text-left">
+              <h2 className="mt-4 text-neutral-100 md:text-2xl font-bold text-xl text-center md:text-left">
                 {hero.title}
               </h2>
               <p className="mt-4 text-neutral-100 md:text-md text-md text-center md:text-left">

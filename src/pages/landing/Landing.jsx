@@ -43,22 +43,19 @@ const Landing = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="flex flex-col  text-center md:w-3/6 w-5/6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-            <div className="flex justify-center  text-3xl md:text-3xl uppercase">
-              <span className="font-bold mx-4 text-yellow-500">
-                {hero.title}
-              </span>
-            </div>
-
-            <div className="mt-4 text-slate-200 md:text-7xl text-6xl font-bold uppercase">
+          <div className="flex flex-col  md:w-3/6 w-5/6 absolute top-1/2 md:bottom-1/2  left-1/2 md:left-1/3 transform -translate-x-1/2 -translate-y-1/2 ">
+            <div className="text-slate-200 md:text-7xl text-6xl font-bold uppercase">
               {hero.description1}
             </div>
-            <div className="mt-4  text-slate-300 md:text-xl text-lg ">
+            <div className="mt-6  text-slate-200 md:text-xl text-lg ">
               {hero.description2}
             </div>
-            <div className="mt-4  text-yellow-500 md:text-2xl text-2xl font-bold uppercase ">
+            <div className="mt-2  text-yellow-500 md:text-2xl text-2xl font-semibold uppercase ">
               {hero.time}
             </div>
+            <p className="mt-1 text-neutral-300 font-medium uppercase">
+              Join us in person
+            </p>
           </div>
         </div>
       ))}

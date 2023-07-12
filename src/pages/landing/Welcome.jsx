@@ -48,13 +48,16 @@ const Welcome = () => {
         </div>
         <div className="w-full md:w-4/6 p-8 flex justify-center items-center">
           <div>
-            <h3 className="text-neutral-100 md:text-2xl font-extrabold text-md mb-4">
-              Welcome
-            </h3>
-            <h2 className="text-neutral-100 md:text-3xl font-extrabold text-3xl">
+            <span className="text-neutral-100 md:text-xl font-semibold text-md">
+              Welcome to
+              <span className="ml-2 text-yellow-600 text-2xl">
+                Jireh Koinonia
+              </span>
+            </span>
+            <h2 className="mt-2 text-neutral-100 md:text-3xl font-extrabold text-3xl">
               {welcome[0].title}
             </h2>
-            <p className="mt-4 text-neutral-100 md:text-md text-md">
+            <p className="mt-2 text-neutral-100 md:text-md text-md">
               {welcome[0].description}
             </p>
             <NavLink
