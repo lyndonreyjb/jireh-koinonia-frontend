@@ -21,8 +21,8 @@ const Women = ({ header, urlFor }) => {
               {ministry[4].title}
             </h2>
             <h2 className=" mt-4 md:text-3xl font-bold text-2xl">
-              An empowering community for women to cultivate authentic
-              connections.
+              An empowering community dedicated to cultivating authenticity
+              among women.
             </h2>
             <p className="mt-4  md:text-md text-md">
               {ministry[4].description}
