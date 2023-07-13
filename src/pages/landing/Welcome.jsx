@@ -39,11 +39,11 @@ const Welcome = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        className="p-0 md:p-20 flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-3/6 ">
+        className="p-0 md:p-20 flex flex-col items-center justify-center md:flex-row w-full">
+        <div className="w-full md:h-96 md:w-1/6 ">
           <img
             src={urlFor(welcome[0].image)}
-            className="object-fill h-full w-full hidden md:block"
+            className="object-fill  h-full w-full hidden md:block"
           />
         </div>
         <div className="w-full md:w-4/6 p-8 flex justify-center items-center">
