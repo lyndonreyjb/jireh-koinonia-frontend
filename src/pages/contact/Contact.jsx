@@ -61,7 +61,7 @@ const Contact = () => {
           id="get-connected"
           className="flex flex-col shadow-lg md:flex-row w-full md:w-5/6  h-full ">
           <div
-            className=" w-full  flex justify-center items-center"
+            className=" p-4 w-full  flex justify-center items-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${bible.toString()})`,
               backgroundSize: "cover",
