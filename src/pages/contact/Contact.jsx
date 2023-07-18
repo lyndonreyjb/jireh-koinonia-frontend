@@ -29,7 +29,7 @@ const Contact = () => {
     return <Loading />;
   }
   return (
-    <div className="">
+    <div className="" alt="Contact">
       {header.map((hero) => (
         <div
           className="relative"
