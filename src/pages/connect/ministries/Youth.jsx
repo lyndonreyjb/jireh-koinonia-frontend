@@ -9,14 +9,14 @@ const Youth = ({ header, urlFor }) => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        className="md:w-5/6 p-0 md:p-20 flex flex-col md:flex-row h-full w-full ">
-        <div className="w-full md:w-3/6 ">
+        className="xl:w-5/6 p-0 md:p-20 flex flex-col xl:flex-row h-full w-full ">
+        <div className="w-full xl:w-3/6 ">
           <img
             src={urlFor(ministry[3].image)}
-            className="object-cover h-96 md:h-full  w-full"
+            className="object-cover h-96 xl:h-full w-full"
           />
         </div>
-        <div className="text-neutral-100 w-full md:w-4/6 p-8 flex justify-center items-center">
+        <div className="text-neutral-100 w-full xl:w-4/6 p-8 flex justify-center items-center">
           <div>
             <h2 className="uppercase text-yellow-600 md:text-lg font-medium text-lg">
               {ministry[3].title}

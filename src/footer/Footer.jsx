@@ -76,18 +76,18 @@ const Footer = () => {
 
       {/*  */}
 
-      <div className=" mx-auto p-10 md:px-56 text-center md:text-left bg-neutral-900">
-        <div className="flex-cols w-full h-full md:flex text-neutral-200">
-          <div className="w-full md:w-3/6 mt-3 md:mt-0">
-            <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase md:justify-start">
+      <div className=" mx-auto p-10 xl:px-56 text-center xl:text-left bg-neutral-900">
+        <div className="flex-cols w-full h-full xl:flex text-neutral-200">
+          <div className="w-full xl:w-3/6 mt-3 xl:mt-0">
+            <h2 className="mb-4 text-2xl flex items-center justify-center font-semibold uppercase xl:justify-start">
               {footer[1].title}
             </h2>
 
             <p>{footer[1].description}</p>
           </div>
 
-          <div className="mx-auto mt-3 md:mt-0">
-            <h6 className="mb-4  text-2xl flex justify-center font-semibold uppercase md:justify-start">
+          <div className="mx-auto mt-3 xl:mt-0">
+            <h6 className="mb-4  text-2xl flex justify-center font-semibold uppercase xl:justify-start">
               {footer[0].title}
             </h6>
             <div className="flex text-2xl justify-center">
@@ -109,19 +109,19 @@ const Footer = () => {
           </div>
 
           {/* Contacts */}
-          <div className="mx-auto mt-3 md:mt-0">
-            <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase md:justify-start">
+          <div className="mx-auto mt-3 xl:mt-0">
+            <h6 className="mb-4 text-2xl flex justify-center font-semibold uppercase xl:justify-start">
               {footer[2].title}
             </h6>
-            <div className="mb-4 flex items-center justify-center md:justify-start">
+            <div className="mb-4 flex items-center justify-center xl:justify-start">
               <AiFillHome />
               <p className="ml-2">{footer[2].address}</p>
             </div>
-            <div className="mb-4 flex items-center justify-center md:justify-start">
+            <div className="mb-4 flex items-center justify-center xl:justify-start">
               <IoMail />
               <p className="ml-2">{footer[2].email}</p>
             </div>
-            <div className="mb-4 flex items-center justify-center md:justify-start">
+            <div className="mb-4 flex items-center justify-center xl:justify-start">
               <AiTwotonePhone />
               <p className="ml-2">{footer[2].phone}</p>
             </div>
@@ -139,13 +139,8 @@ const Footer = () => {
 
         <span
           className="text-gray-500 text-xs hover:text-yellow-600 cursor-pointer"
-          onClick={() =>
-            window.open(
-              "https://www.linkedin.com/in/lyndon-rey-bualat/",
-              "_blank"
-            )
-          }>
-          Design By Lyndon
+          onClick={() => window.open("https://www.lyndonbualat.co/", "_blank")}>
+          Design By LyndonBualat.co
         </span>
       </div>
     </footer>

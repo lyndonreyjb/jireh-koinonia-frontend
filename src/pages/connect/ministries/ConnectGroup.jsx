@@ -11,14 +11,14 @@ const ConnectGroup = ({ header, urlFor }) => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        className="p-0 md:p-20 flex flex-col md:flex-row h-full md:w-5/6">
-        <div className="w-full md:w-3/6 md:order-2">
+        className="p-0 md:p-20 flex flex-col xl:flex-row h-full xl:w-5/6">
+        <div className="w-full xl:w-3/6 xl:order-2">
           <img
             src={urlFor(ministry[0].image)}
-            className="object-cover h-96 w-full"
+            className="object-cover h-96 xl:h-full w-full"
           />
         </div>
-        <div className="w-full text-neutral-900 md:w-4/6 p-8 flex justify-center items-center md:order-1">
+        <div className="w-full text-neutral-900 xl:w-4/6 p-8 flex justify-center items-center md:order-1">
           <div>
             <h2 className="md:text-3xl font-extrabold text-yellow-600 text-3xl">
               {ministry[0].title}
