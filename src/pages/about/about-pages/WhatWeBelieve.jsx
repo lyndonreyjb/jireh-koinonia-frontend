@@ -46,7 +46,7 @@ const WhatWeBelieve = () => {
         <h1 className="md:mb-12 uppercase p-8 text-3xl md:text-5xl font-extrabold text-center">
           Our Beliefs
         </h1>
-        {beliefs.map((belief) => (
+        {/* {beliefs.map((belief) => (
           <div key={belief._id} className="relative flex flex-col m-4 md:w-3/6">
             <button
               className="text-3xl flex justify-between"
@@ -76,7 +76,7 @@ const WhatWeBelieve = () => {
               )}
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

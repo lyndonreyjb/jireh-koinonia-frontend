@@ -31,7 +31,7 @@ const WhoWeAre = () => {
         <h1 className="md:mb-12 uppercase p-8 text-3xl md:text-5xl font-extrabold text-center">
           Our Values
         </h1>
-        {header.map((values, index) => (
+        {/* {header.map((values, index) => (
           <div
             key={values._id}
             className="relative m-4 p-4 md:p-14 md:w-3/6 bg-yellow-500 flex flex-col justify-center">
@@ -43,7 +43,7 @@ const WhoWeAre = () => {
             </h1>
             <p className="mt-2">{values.description}</p>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
