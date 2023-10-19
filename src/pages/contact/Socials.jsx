@@ -33,10 +33,10 @@ const Socials = () => {
               <AiTwotonePhone className="text-white" />
             </div>
           </div>
-          {/* <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
+          <h3 className="uppercase font-extrabold text-xl mt-4 text-slate-900">
             Phone
           </h3>
-          <p>+ 403 555 5555</p> */}
+          {/* <p>+ 403 555 5555</p> */}
         </div>
       </div>
     </div>
