@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { urlFor, client } from "../../client";
 import bible from "../../assets/bible.jpg";
 import Loading from "../../Loading";
-import Socials from "./Socials";
+// import Socials from "./Socials";
 import MapBox from "../../MapBox";
 const Contact = () => {
   const [header, setHeader] = useState([]);
@@ -112,7 +112,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <Socials />
+      {/* <Socials /> */}
 
       <MapBox />
     </div>

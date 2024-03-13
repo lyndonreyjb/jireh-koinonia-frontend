@@ -61,7 +61,7 @@ const AboutLanding = () => {
         <div className="md:w-3/6 flex flex-col md:flex-row  justify-center items-center">
           <div className="p-8 md:p-10 md:order-2 ">
             <div>
-              <h1 className="font-bold text-5xl text-center">About Us</h1>
+              <h1 className="font-bold text-5xl">About Us</h1>
               <p className="mt-4">
                 We believe that the journey of faith is not meant to be walked
                 alone. It is in community, together with fellow believers, that
