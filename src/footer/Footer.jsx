@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Newsletter */}
-      <div className="col-span-4 p-10  md:p-14  flex justify-center bg-neutral-900">
+      {/* <div className="col-span-4 p-10  md:p-14  flex justify-center bg-neutral-900">
         <form action="#" className="w-5/6 md:w-2/4">
           <div className="gird-cols-3 grid gap-4 ">
             <h6 className=" text-neutral-100 flex justify-center font-semibold uppercase md:justify-start">
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
         </form>
-      </div>
+      </div> */}
 
       {/*  */}
 
