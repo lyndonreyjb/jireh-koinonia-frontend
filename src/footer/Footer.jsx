@@ -115,7 +115,7 @@ const Footer = () => {
             </h6>
             <div className="mb-4 flex items-center justify-center xl:justify-start">
               <AiFillHome />
-              <p className="ml-2">{footer[2].address}</p>
+              <p className="ml-2 text-sm sm:text-md">{footer[2].address}</p>
             </div>
             {/* <div className="mb-4 flex items-center justify-center xl:justify-start">
               <IoMail />
