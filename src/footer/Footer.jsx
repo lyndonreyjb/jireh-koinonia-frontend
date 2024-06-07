@@ -117,14 +117,14 @@ const Footer = () => {
               <AiFillHome />
               <p className="ml-2">{footer[2].address}</p>
             </div>
-            <div className="mb-4 flex items-center justify-center xl:justify-start">
+            {/* <div className="mb-4 flex items-center justify-center xl:justify-start">
               <IoMail />
               <p className="ml-2">{footer[2].email}</p>
             </div>
             <div className="mb-4 flex items-center justify-center xl:justify-start">
               <AiTwotonePhone />
               <p className="ml-2">{footer[2].phone}</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
