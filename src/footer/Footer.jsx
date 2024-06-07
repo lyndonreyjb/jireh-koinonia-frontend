@@ -137,11 +137,11 @@ const Footer = () => {
           </a>
         </div>
 
-        <span
+        {/* <span
           className="text-gray-500 text-xs hover:text-yellow-600 cursor-pointer"
           onClick={() => window.open("https://www.lyndonbualat.co/", "_blank")}>
           Design By LyndonBualat.co
-        </span>
+        </span> */}
       </div>
     </footer>
   );
