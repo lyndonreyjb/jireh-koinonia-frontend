@@ -63,8 +63,6 @@ const Landing = () => {
       <Welcome />
 
       <ConnectLanding />
-
-      <MapBox />
     </div>
   );
 };

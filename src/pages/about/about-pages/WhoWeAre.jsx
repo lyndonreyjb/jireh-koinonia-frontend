@@ -6,25 +6,25 @@ const WhoWeAre = () => {
   const [header, setHeader] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const query = '*[_type == "whoweare"]';
-      const data = await client.fetch(query);
-      setHeader(data);
-    } catch (e) {
-      console.log(e);
-    }
-    setLoading(false);
-  };
+  // const fetchData = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const query = '*[_type == "whoweare"]';
+  //     const data = await client.fetch(query);
+  //     setHeader(data);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
   return (
     <div id="who-we-are">
       <div className="md:3/6 md:pb-40  md:pt-10 flex flex-col md:justify-center md:items-center">
