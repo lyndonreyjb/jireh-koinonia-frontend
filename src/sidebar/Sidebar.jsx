@@ -37,12 +37,12 @@ const Sidebar = () => {
             to="/connect">
             Connect
           </NavLink>
-          <NavLink
+          {/* <NavLink
             onClick={closeSidebar}
             className="p-1 hover:pl-4 transition-all duration-300"
             to="/contact">
             Contact
-          </NavLink>
+          </NavLink> */}
           <div className="p-1">
             <button
               className="flex items-center w-full"

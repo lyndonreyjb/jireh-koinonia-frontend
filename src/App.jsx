@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import {
   AboutLayout,
-  Contact,
+  // Contact,
   Layout,
   Landing,
   OurLocation,
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Landing />} />
-            <Route path="contact" element={<Contact />} />
+            {/* <Route path="contact" element={<Contact />} /> */}
 
             <Route path="connect/" element={<Connect />} />
 

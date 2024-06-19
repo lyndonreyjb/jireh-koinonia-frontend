@@ -91,9 +91,9 @@ const NavLinks = () => {
         onClick={handleNavLinkClick}>
         Connect
       </NavLink>
-      <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>
+      {/* <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>
         Contact
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 };

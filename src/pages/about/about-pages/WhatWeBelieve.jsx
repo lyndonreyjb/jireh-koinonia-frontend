@@ -9,36 +9,36 @@ const WhatWeBelieve = () => {
   const [loading, setLoading] = useState(true);
   const [expandedBeliefs, setExpandedBeliefs] = useState({});
 
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const query = '*[_type == "beliefs"]';
-      const data = await client.fetch(query);
-      setBeliefs(data);
-      // Initialize expandedBeliefs state with false for all beliefs
-      setExpandedBeliefs(
-        data.reduce((obj, belief) => ({ ...obj, [belief._id]: false }), {})
-      );
-    } catch (e) {
-      console.log(e);
-    }
-    setLoading(false);
-  };
+  // const fetchData = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const query = '*[_type == "beliefs"]';
+  //     const data = await client.fetch(query);
+  //     setBeliefs(data);
+  //     // Initialize expandedBeliefs state with false for all beliefs
+  //     setExpandedBeliefs(
+  //       data.reduce((obj, belief) => ({ ...obj, [belief._id]: false }), {})
+  //     );
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const toggleBelief = (beliefId) => {
-    setExpandedBeliefs((prevExpandedBeliefs) => ({
-      ...prevExpandedBeliefs,
-      [beliefId]: !prevExpandedBeliefs[beliefId],
-    }));
-  };
+  // const toggleBelief = (beliefId) => {
+  //   setExpandedBeliefs((prevExpandedBeliefs) => ({
+  //     ...prevExpandedBeliefs,
+  //     [beliefId]: !prevExpandedBeliefs[beliefId],
+  //   }));
+  // };
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <div>
